@@ -1,0 +1,33 @@
+
+This directory contains some simple examples of planning domains
+and planning problems, written in PDDL.
+
+Test these domains at http://editor.planning.domains/ or with one of the other
+planners I've mentioned in class (FF or Fast Downward).
+
+domain1.pddl / problem1.pddl
+An example of a logistics-style planning problem where different types of vehicles
+need to move around packages to particular locations.
+[Works with editor.planning.domains]
+
+domain2.pddl / problem2.pddl
+Another example of logistics, this time using types.
+[Works with editor.planning.domains]
+
+domain3.pddl / problem3.pddl
+Another example of logistics, this time using a type hierarchy.
+[Does not work with editor.planning.domains but works with FF]
+
+domain4.pddl / problem4.pddl
+A logistics example using conditional and quantified effects.
+[Does not work with editor.planning.domains but works with FF]
+
+domain5.pddl / problem5.pddl
+A logistics example using conditional, quantified effects, and typing.
+[Works with editor.planning.domains]*
+
+*There appears to be a bug in editor.planning.domains involving quantified
+conditional effects. The example in domain5.pddl presents a workaround by using a
+typed variable on "forall". You should compare domain4.pddl and domain5.pddl to see
+the difference.
+
