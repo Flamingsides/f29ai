@@ -2,14 +2,7 @@
 
 Written, self-paced practicals that replace a live-coding walkthrough. Read them online here and work with the PDDL files you already downloaded from the [Week 4 PDDL examples and planning resources](https://canvas.hw.ac.uk/courses/35362/pages/week-4-pddl-examples-and-planning-resources) Canvas page. You do not need Git or to download this repository.
 
-**Verification status (draft):** checked with a local Fast Downward 26.6+ installation and the VAL plan validator, not in a browser or editor.
-
-- Fast Downward solved all 12 supplied Canvas pairs (7 in Set 1, 5 in Set 2).
-- VAL validated the plans for the supplied Set 1 files and for `domain1` and `domain4`. It rejected the typed declarations in the supplied `domain2` and `domain3`, so those two were not validated by VAL. For `domain5` the check used a copy with every argument explicitly typed, so it is not a validation of the unchanged file.
-- The repaired versions described in Tutorials 5 and 6 were checked separately (Fast Downward and VAL, on explicitly typed copies).
-- Not tested: the Planning.domains editor, the VS Code PDDL extension, FF, or any student machine.
-
-Please report any problems.
+Please report any problems you find.
 
 ## Start here
 

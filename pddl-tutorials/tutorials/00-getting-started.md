@@ -4,7 +4,7 @@ Use [Planning.domains](https://editor.planning.domains/) to edit PDDL files and 
 
 Alternatively, use **VS Code with the [PDDL extension](https://github.com/jan-dolejsi/vscode-pddl)**. The extension provides syntax highlighting and planner integration; configure it to use a planner such as **Fast Downward**.
 
-You do not need Git or a local planner to begin. The compatibility notes in the Canvas archive's README describe an earlier setup. The tutorial examples were checked with a local Fast Downward installation (see the optional section below); they were not tested in the Planning.domains editor or through the VS Code extension. If you see a parser difference there, check the tutorial's repair notes before assuming your edit is wrong.
+You do not need Git or a local planner to begin. If you see a parser difference, check the tutorial's repair notes before assuming your edit is wrong.
 
 ## Your first pair of files
 
