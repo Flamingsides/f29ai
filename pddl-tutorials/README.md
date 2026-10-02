@@ -2,7 +2,7 @@
 
 Written, self-paced practicals that replace a live-coding walkthrough. Read them online here and work with the PDDL files you already downloaded from the [Week 4 PDDL examples and planning resources](https://canvas.hw.ac.uk/courses/35362/pages/week-4-pddl-examples-and-planning-resources) Canvas page. You do not need Git or to download this repository.
 
-**Draft status:** these tutorials are a draft. The examples have not yet been run against a current planner, particularly the typed examples in Tutorials 5 and 6. Expect corrections.
+**Verification status:** the Canvas examples, the repairs in Tutorials 5 and 6 and the expected outcomes stated in the tutorials were checked with Fast Downward 26.6+ and the VAL plan validator. They have not been tested with other planners (for example FF or the Planning.domains editor) or from a student machine, and VAL cannot check the supplied typed files `domain2` and `domain3`. Still a draft: please report any problems.
 
 ## Start here
 

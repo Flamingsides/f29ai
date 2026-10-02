@@ -4,7 +4,7 @@
 
 **Outcome:** distinguish static classification predicates from type declarations and understand inheritance.
 
-**Preparation:** these legacy typed examples need review before use. Work on copies and apply the edits below, or use the lecturer's checked copies. Keep the Canvas originals unchanged for comparison. This tutorial includes a guided repair so that a parser difference is not mistaken for a conceptual feature of typing.
+**Preparation:** the Canvas typed examples parse and solve in Fast Downward as supplied, but their type declarations need the repairs below to say what they appear to say. Apply the edits to your own copies of the Canvas files and keep the Canvas originals unchanged for comparison. Other tools may be stricter than Fast Downward about the original declarations, so a parser difference is not necessarily a conceptual feature of typing.
 
 ## Predict and compare
 
@@ -44,6 +44,13 @@ Change the package parameters and packet declarations to `package` as above. Eac
 
 Predict why a truck can instantiate `?v - vehicle` and an airport can instantiate `?l - location`.
 
+<details>
+<summary>Why the repair matters</summary>
+
+In the supplied version 2, `?o - object` accepts *any* object, so `(load truck1 airplane1 airport1)` is legal and the planner can load trucks into the airplane (a shortest plan of 15 actions, instead of 18 with packages only). In the supplied version 3, the declaration `object city truck airplane - vehicle` makes `object` and `city` subtypes of `vehicle` as well; Fast Downward happens to give the intended plans, but the hierarchy is not the one it appears to be. Both repairs give the 18-action shortest plan again.
+
+</details>
+
 ## Run
 
 Run the repaired version 2 and version 3 pairs with the lecturer's supported planner. Check that both can achieve the same delivery goals as version 1. Compare a grounded `load` action: where has each classification check moved?
@@ -59,7 +66,7 @@ In the repaired hierarchy, `truck` and `airplane` are subtypes of `vehicle`, and
 
 ## Modify and explain
 
-In a copy of the hierarchical problem, declare `packet1 - truck` rather than `packet1 - package`, leaving its goal unchanged. Explain why it no longer matches the package parameter of `load` or `unload`. Distinguish this lost action applicability from the false claim that predicates have been fully typed: the supplied predicate declarations remain untyped.
+In a copy of the hierarchical problem, declare `packet1 - truck` rather than `packet1 - package`, leaving its goal unchanged. Explain why it no longer matches the package parameter of `load` or `unload`. (Expected result: no plan exists, because `packet1` can neither be loaded nor leave city1; Fast Downward reports `Task is provably unsolvable.`) Distinguish this lost action applicability from the false claim that predicates have been fully typed: the supplied predicate declarations remain untyped.
 
 **Checkpoint:** submit the comparison table and explain one inherited type relationship and one action binding excluded by typing.
 

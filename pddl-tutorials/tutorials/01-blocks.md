@@ -24,7 +24,7 @@ All other facts persist, including `(clear e)` in this encoding. Check your plan
 <details>
 <summary>Hint: building the tower</summary>
 
-Build from the bottom: put `e` on `f`, then `d` on `e`, then `c` on `d`, then `b` on `c`, then `a` on `b`. Each placement needs a pickup first. This gives a ten-action candidate plan. The planner may choose another sequence.
+Build from the bottom: put `e` on `f`, then `d` on `e`, then `c` on `d`, then `b` on `c`, then `a` on `b`. Each placement needs a pickup first. This gives a ten-action plan, which is also the shortest for this problem. A planner optimised for speed rather than plan length may return a longer valid plan (a default Fast Downward run returned 18 actions).
 
 </details>
 
@@ -36,7 +36,14 @@ Save a copy of the problem and replace its goal with:
 (:goal (and (on a b) (on b a)))
 ```
 
-Predict whether both facts can hold in a reachable state from the supplied initial state. Run it. Explain the result using the actions: placing one block makes the supporting block non-clear, and picking a block from a stack deletes that `on` relation.
+Predict whether both facts can hold in a reachable state from the supplied initial state. Run it. Explain the result using the actions: a block can only be picked up while it is `clear`; placing one block on another deletes `clear` for the supporting block, and it becomes clear again only when the block above is picked up, which deletes that `on` fact.
+
+<details>
+<summary>Expected result</summary>
+
+No plan exists: whichever of `(on a b)` and `(on b a)` is made true first, the supporting block stops being clear and cannot be picked up to complete the other. Fast Downward reports `Task is provably unsolvable.` (a completed search, not a timeout).
+
+</details>
 
 ## Follow-up
 
@@ -46,5 +53,12 @@ Predict whether both facts can hold in a reachable state from the supplied initi
 **Checkpoint:** submit one valid plan, two state transitions, and a short explanation of the circular-goal experiment. If the solver times out, retain your reasoning and report the timeout separately.
 
 **Optional modelling challenge:** after picking up a clear block, does this model allow placing it on itself? Examine repeated parameter values and the meaning of `clear`. Discuss a repair with your lecturer.
+
+<details>
+<summary>Check your answer</summary>
+
+Yes. `(pickup_from_table a)` followed by `(putdown_on_stack a a)` is a legal sequence that produces `(on a a)`: `a` is still `clear` while held, and nothing requires the two parameters to differ.
+
+</details>
 
 [Next: two grippers](02-grippers.md)

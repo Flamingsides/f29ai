@@ -22,15 +22,15 @@ Solve version 4. A five-action candidate is to load the three packets at city1, 
 <details>
 <summary>Hint: empty versus loaded</summary>
 
-The precondition checks the vehicle, location and vehicle's position. For each object, the effect fires only if `(in ?o ?v)` is true in the state before the action. An empty vehicle can satisfy the precondition while unloading no objects.
+The precondition checks the vehicle, location and vehicle's position. For each object, the effect fires only if `(in ?o ?v)` is true in the state before the action. An empty vehicle can satisfy the precondition while unloading no objects: `(unload_all truck1 city1)` is applicable in the initial state and changes nothing.
 
 </details>
 
 ## Modify
 
-Add `packet4` at city1 and add `(object packet4)` to the initial state of a copy of version 4. Do not add it to the goal.
+In a copy of version 4, add `packet4` to `:objects`, and add `(object packet4)` and `(at packet4 city1)` to the initial state. Do not add it to the goal.
 
-Compare two manually constructed plans: one leaves packet4 at city1; the other loads it along with the three required packets. In the second plan, predict whether `unload_all` also unloads packet4 despite its absence from the goal. Explain why goal membership is not the effect's condition.
+Compare two manually constructed plans: one leaves packet4 at city1; the other loads it along with the three required packets. In the second plan, predict whether `unload_all` also unloads packet4 despite its absence from the goal. Explain why goal membership is not the effect's condition. (Both plans are valid; in the second, `unload_all` adds `(at packet4 city2)` along with the other three packets.)
 
 ## Compare the typed version
 
@@ -48,7 +48,7 @@ Version 5 uses `forall (?o - object)`, but `object` is PDDL's universal root typ
 )
 ```
 
-Move `:types` before `:predicates` in the copied domain. Run the copied pair and compare the effects with version 4. The logical distinction is that the typed quantifier ranges over packages; any historical parser workaround is a separate implementation issue.
+Move `:types` before `:predicates` in the copied domain. Run the copied pair and compare the effects with version 4; the same five-action plan results. The logical distinction is that the typed quantifier ranges over packages; any historical parser workaround is a separate implementation issue.
 
 **Checkpoint:** explain `forall` versus `when`, the empty-vehicle case, and why packet4 is unloaded when loaded even without being named in the goal.
 

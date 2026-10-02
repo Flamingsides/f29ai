@@ -20,7 +20,7 @@ Solve the problem. Identify the pickup, movement and putdown actions. Count the 
 <details>
 <summary>Hint: a route to try</summary>
 
-Pick up `a` and `b` at the office, move to the pub, put down both, pick up `d`, return to the office and put down `d`. This is an eight-action candidate sequence with two moves.
+Pick up `a` and `b` at the office, move to the pub, put down both, pick up `d`, return to the office and put down `d`. This is an eight-action sequence with two moves, which is the shortest for this problem.
 
 </details>
 
@@ -28,7 +28,14 @@ Pick up `a` and `b` at the office, move to the pub, put down both, pick up `d`, 
 
 Remove only `(path pub office)` from a copy of the initial state. Keep the goal unchanged. Predict the outcome and explain which delivery loses its required return route.
 
-Then create a new location `library` and a goal that puts `a` there. First add no paths involving `library`; then add both `(path office library)` and `(path library office)`. Explain what changes.
+Then add `library` to `:objects` and create a goal that puts `a` there. First add no paths involving `library`; then add both `(path office library)` and `(path library office)`. Explain what changes.
+
+<details>
+<summary>Expected results</summary>
+
+Without `(path pub office)` no plan exists: the robot can reach the pub but never return, so `d` cannot reach the office. With a goal of `(onTable a library)`, there is no plan until a path into `library` exists; with the paths added, `pickup`, `move`, `putdown` solves it in three actions. Fast Downward reports `Task is provably unsolvable.` for the two unsolvable variants.
+
+</details>
 
 **Checkpoint:** submit the route, a state trace covering one held block through a move, and a reachability explanation.
 
