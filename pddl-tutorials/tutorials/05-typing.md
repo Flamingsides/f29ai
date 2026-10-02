@@ -1,10 +1,10 @@
 # 5. Replace classification facts with types
 
-**Files:** `originals/lecture5d-pddl-examples/domain1.pddl`, `domain2.pddl`, `domain3.pddl` and their matching problems.
+**Files:** `lecture5d-pddl-examples/domain1.pddl`, `domain2.pddl`, `domain3.pddl` and their matching problems.
 
 **Outcome:** distinguish static classification predicates from type declarations and understand inheritance.
 
-**Preparation:** these legacy typed examples need review before use. Work on copies and apply the edits below, or use the lecturer's checked copies. Preserve originals for comparison. This tutorial includes a guided repair so that a parser difference is not mistaken for a conceptual feature of typing.
+**Preparation:** these legacy typed examples need review before use. Work on copies and apply the edits below, or use the lecturer's checked copies. Keep the Canvas originals unchanged for comparison. This tutorial includes a guided repair so that a parser difference is not mistaken for a conceptual feature of typing.
 
 ## Predict and compare
 

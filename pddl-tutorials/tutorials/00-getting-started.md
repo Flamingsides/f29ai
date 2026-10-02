@@ -4,7 +4,7 @@ You need a text editor and the planner selected by your lecturer. For a browser-
 
 ## Your first pair of files
 
-Load these from `originals/lecture5b-pddl-examples/`:
+Open these from the extracted Canvas folder `lecture5b-pddl-examples/` (Set 1):
 
 - `blocksworld1.pddl`: the **domain**, defining predicates and actions.
 - `problem1-1.pddl`: the **problem**, defining objects, the initial state and the goal.

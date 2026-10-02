@@ -1,6 +1,6 @@
 # 3. Move between locations
 
-**Files:** `originals/lecture5b-pddl-examples/blocksworld3.pddl` and `problem3-1.pddl`.
+**Files:** `lecture5b-pddl-examples/blocksworld3.pddl` and `problem3-1.pddl`.
 
 **Outcome:** distinguish static connections from changing state and explain how objects travel while being held.
 

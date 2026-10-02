@@ -1,6 +1,6 @@
 # 4. Deliver packages
 
-**Files:** `originals/lecture5d-pddl-examples/domain1.pddl` and `problem1.pddl`.
+**Files:** `lecture5d-pddl-examples/domain1.pddl` and `problem1.pddl`.
 
 **Outcome:** explain a multi-vehicle transport chain and identify constraints the model does and does not express.
 

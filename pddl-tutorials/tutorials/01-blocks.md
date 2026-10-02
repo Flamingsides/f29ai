@@ -1,6 +1,6 @@
 # 1. Build and rearrange towers
 
-**Files:** `originals/lecture5b-pddl-examples/blocksworld1.pddl` and `problem1-1.pddl`. Follow-up problems: `problem1-2.pddl`, `problem1-3.pddl`.
+**Files:** `lecture5b-pddl-examples/blocksworld1.pddl` and `problem1-1.pddl`. Follow-up problems: `problem1-2.pddl`, `problem1-3.pddl`.
 
 **Outcome:** explain how actions transform a state and why some orders work and others fail.
 

@@ -1,16 +1,16 @@
 # F29AI: PDDL practical tutorials
 
-Draft teaching pack based on the supplied Lecture 5b and 5d examples. The original files are preserved in `originals/`. The written exercises replace a live-coding walkthrough with a sequence students can work through at their own pace.
+Written, self-paced practicals that replace a live-coding walkthrough. Read them online here and work with the PDDL files you already downloaded from the [Week 4 PDDL examples and planning resources](https://canvas.hw.ac.uk/courses/35362/pages/week-4-pddl-examples-and-planning-resources) Canvas page. You do not need Git or to download this repository.
 
-**Release status:** the worksheets and source files have been inspected. The examples have not been run against a current planner in preparing this draft. Complete the checks in [INSTRUCTOR-NOTES.md](INSTRUCTOR-NOTES.md) before classroom release, particularly for the typed examples.
+**Draft status:** these tutorials are a draft. The examples have not yet been run against a current planner, particularly the typed examples in Tutorials 5 and 6. Expect corrections.
 
 ## Start here
 
-1. Download this repository using **Code → Download ZIP**, then extract it. Git knowledge is optional.
+1. Download **Set 1** and **Set 2** from the Canvas page and extract them. You should have folders named `lecture5b-pddl-examples/` (Set 1) and `lecture5d-pddl-examples/` (Set 2).
 2. Read [Getting started](tutorials/00-getting-started.md).
 3. Work through the tutorials below. Keep a copy of each changed problem and your explanations.
 
-| Tutorial | Source examples | Suggested time | What you will learn |
+| Tutorial | Canvas files | Suggested time | What you will learn |
 |---|---|---:|---|
 | [1. Build and rearrange towers](tutorials/01-blocks.md) | Set 1: `blocksworld1.pddl`, `problem1-1/2/3.pddl` | 25 min | States, goals, preconditions, add/delete effects |
 | [2. Give the robot two hands](tutorials/02-grippers.md) | Set 1: `blocksworld2.pddl`, `problem2-1/2/3.pddl` | 20 min | Parameters, resource constraints, goal interaction |
@@ -27,25 +27,7 @@ Each tutorial follows **predict → run → modify → explain**. Write a predic
 
 A planner can return a different valid plan from a classmate's. Compare applicability and goal satisfaction; do not require an identical action sequence. A returned plan is not automatically a shortest plan.
 
-## Files
-
-```text
-README.md
-INSTRUCTOR-NOTES.md
-tutorials/
-  00-getting-started.md
-  01-blocks.md
-  02-grippers.md
-  03-movement.md
-  04-logistics.md
-  05-typing.md
-  06-conditional-effects.md
-originals/
-  lecture5b-pddl-examples/
-  lecture5d-pddl-examples/
-```
-
-Create your own `my-work/` folder for edited files. Leave the originals available for comparison.
+Create your own `my-work/` folder for edited files and leave the extracted Canvas folders unchanged for comparison.
 
 ## Further written tutorials
 
@@ -55,4 +37,4 @@ Create your own `my-work/` folder for edited files. Leave the originals availabl
 
 ## Attribution
 
-The files in `originals/` come from `Lecture5b_RP_PDDL_Examples_Set1.zip` and `Lecture5d_RP_PDDL_Examples_Set2.zip`. Set 1 source comments credit Ron Petrick. Their existing comments and README files are retained. Redistribution and licensing should be confirmed by the lecturer before a public release.
+The PDDL examples come from the lecture materials (Set 1 files credit Ron Petrick in their source comments) and are distributed through Canvas, not in this repository.

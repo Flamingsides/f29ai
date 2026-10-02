@@ -1,6 +1,6 @@
 # 2. Give the robot two hands
 
-**Files:** `originals/lecture5b-pddl-examples/blocksworld2.pddl` and `problem2-1.pddl`, `problem2-2.pddl`, `problem2-3.pddl`.
+**Files:** `lecture5b-pddl-examples/blocksworld2.pddl` and `problem2-1.pddl`, `problem2-2.pddl`, `problem2-3.pddl`.
 
 **Outcome:** explain how action parameters represent a resource and how goals can interact.
 

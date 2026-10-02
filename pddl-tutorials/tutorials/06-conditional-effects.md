@@ -1,6 +1,6 @@
 # 6. Unload everything at once
 
-**Files:** `originals/lecture5d-pddl-examples/domain4.pddl`, `problem4.pddl`, `domain5.pddl`, `problem5.pddl`.
+**Files:** `lecture5d-pddl-examples/domain4.pddl`, `problem4.pddl`, `domain5.pddl`, `problem5.pddl`.
 
 **Outcome:** explain how `forall` and `when` combine, and why an applicable action may have no effect.
 
