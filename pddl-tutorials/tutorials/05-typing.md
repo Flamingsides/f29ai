@@ -53,7 +53,7 @@ In the supplied version 2, `?o - object` accepts *any* object, so `(load truck1 
 
 ## Run
 
-Run the repaired version 2 and version 3 pairs with the lecturer's supported planner. Check that both can achieve the same delivery goals as version 1. Compare a grounded `load` action: where has each classification check moved?
+Run the repaired version 2 and version 3 pairs with your chosen planner. Check that both can achieve the same delivery goals as version 1. Compare a grounded `load` action: where has each classification check moved?
 
 If a parser reports an error, retain its exact text and distinguish it from a search result. A change in typing syntax is not evidence that the delivery task itself is impossible.
 

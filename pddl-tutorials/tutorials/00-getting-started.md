@@ -1,6 +1,10 @@
 # Getting started
 
-You need a text editor and the planner selected by your lecturer. For a browser-based starting point, [Planning.domains](https://editor.planning.domains/) supports loading local files through **File → Load**. The compatibility notes in the Canvas archive's README describe an earlier setup. The examples in these tutorials were checked with Fast Downward (see the optional command below), not with the Planning.domains editor, so if you use the editor and see a parser difference, check the tutorial's repair notes before assuming your edit is wrong.
+Use [Planning.domains](https://editor.planning.domains/) to edit PDDL files and run the planner in your browser. Download and extract the examples from [Canvas](https://canvas.hw.ac.uk/courses/35362/pages/week-4-pddl-examples-and-planning-resources), then use **File → Load** to open the matching domain and problem files specified in each tutorial.
+
+Alternatively, use **VS Code with the [PDDL extension](https://github.com/jan-dolejsi/vscode-pddl)**. The extension provides syntax highlighting and planner integration; configure it to use a planner such as **Fast Downward**.
+
+You do not need Git or a local planner to begin. The compatibility notes in the Canvas archive's README describe an earlier setup. The tutorial examples were checked with a local Fast Downward installation (see the optional section below); they were not tested in the Planning.domains editor or through the VS Code extension. If you see a parser difference there, check the tutorial's repair notes before assuming your edit is wrong.
 
 ## Your first pair of files
 
@@ -25,9 +29,13 @@ In these classical examples, a fact absent from the initial state is false. Acti
 
 ## Running and checking
 
-Use your configured planner's solve command and select the matching domain/problem pair. Save the returned plan or copy its actions into your notes. For each action, check its preconditions in the current state, remove its delete effects, and add its positive effects. Check all goal conditions in the final state.
+Use your chosen planner's solve command (the browser editor, the VS Code extension or a local planner) and select the matching domain/problem pair. Save the returned plan or copy its actions into your notes. For each action, check its preconditions in the current state, remove its delete effects, and add its positive effects. Check all goal conditions in the final state.
 
-Optional: with a local [Fast Downward](https://www.fast-downward.org/) installation, this command solves a pair and writes the plan to `plan.txt`:
+If the planner reports a problem, distinguish a parsing error, an unsupported feature, a timeout/service error, and a completed search that reports no plan. A timeout does not prove the problem is unsolvable.
+
+## Optional: a local planner (Fast Downward)
+
+If you have a local [Fast Downward](https://www.fast-downward.org/) installation, this command solves a pair and writes the plan to `plan.txt`:
 
 ```text
 ./fast-downward.py --plan-file plan.txt domain.pddl problem.pddl \
@@ -35,8 +43,6 @@ Optional: with a local [Fast Downward](https://www.fast-downward.org/) installat
 ```
 
 Replace the search with `"astar(lmcut())"` for a plan with the fewest actions (`lmcut` does not support the conditional effects in Tutorial 6; use `"astar(blind())"` there). A problem with no plan ends with `Task is provably unsolvable.` and exit code 11.
-
-If the planner reports a problem, distinguish a parsing error, an unsupported feature, a timeout/service error, and a completed search that reports no plan. A timeout does not prove the problem is unsolvable.
 
 ## Keep a small record
 
