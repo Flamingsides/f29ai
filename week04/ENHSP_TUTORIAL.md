@@ -6,7 +6,7 @@ Use this if <https://editor.planning.domains/> is down or slow (it can fail unde
 Download [`enhsp-20.jar`](https://github.com/valvestate/f29ai/raw/main/week04/enhsp-20.jar)
 from this folder (or from the Canvas page
 [Week 4: PDDL examples and planning resources](https://canvas.hw.ac.uk/courses/35362/pages/week-4-pddl-examples-and-planning-resources))
-and put it in the same folder as the lab PDDL files. Edinburgh GRID Lab machines already have Java; on your own machine, install a JDK (version 11 or later).
+and put it in the same folder as the lab PDDL files. **Edinburgh students:** GRID Lab machines already have Java. Otherwise, install a JDK (version 11 or later).
 
 Check Java works:
 
