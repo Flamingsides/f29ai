@@ -41,7 +41,7 @@ Plan-Length:14
 ## 5. Tips
 - Keep files in one folder so relative paths work.
 - Plans may differ from the sample answers; any valid plan is acceptable.
-- Add `-planner opt-hlmax` for an optimal plan (may be slower).
+- Add `-planner opt-hmax` for an optimal plan (may be slower).
 
 ## Licence
 ENHSP is by Enrico Scala and collaborators, released under the GNU GPL v3 or later.
